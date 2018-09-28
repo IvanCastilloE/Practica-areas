@@ -86,12 +86,24 @@ namespace PracticaAreas
             {
                 //rectangulo
                 case 0:
+                    var controlAreaRectangulo = (ControlAreaRectangulo)(panelConfiguracion.Children[0]);
+                    float baseRectangulo = float.Parse(controlAreaRectangulo.baseRectangulo.Text);
+                    float alturaRectangulo = float.Parse(controlAreaRectangulo.alturaRectangulo.Text);
+                    area = baseRectangulo * alturaRectangulo;
                     break;
                 //triangulo
                 case 1:
+                    var controlAreaTriangulo = (ControlAreaTriangulo)(panelConfiguracion.Children[0]);
+                    float baseTriangulo = float.Parse(controlAreaTriangulo.baseTriangulo.Text);
+                    float alturaTriangulo = float.Parse(controlAreaTriangulo.alturaTriangulo.Text);
+                    area = (baseTriangulo * alturaTriangulo)/2;
                     break;
                 //circulo
                 case 2:
+                    float pi = Convert.ToSingle(Math.PI);
+                    var controlAreaCirculo = (ControlAreaCirculo)panelConfiguracion.Children[0];
+                    float radio = float.Parse(controlAreaCirculo.radio.Text);
+                    area = radio * pi;
                     break;
                 //trapecio
                 case 3:
