@@ -107,6 +107,11 @@ namespace PracticaAreas
                     break;
                 //trapecio
                 case 3:
+                    var controlAreaTrapecio = (ControlAreaTrapecio)panelConfiguracion.Children[0];
+                    float baseMayor = (float.Parse(controlAreaTrapecio.baseMayor.Text));
+                    float baseMenor = (float.Parse(controlAreaTrapecio.BaseMenor.Text));
+                    float AlturaTrapecio = (float.Parse(controlAreaTrapecio.alturaTrapecio.Text));
+                    area = ((baseMayor + baseMenor) * AlturaTrapecio) / 2;
                     break;
                 //nada
                 default:
